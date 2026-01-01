@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-02
+
+### Added
+
+- **HTTP Transport Support** - New `--transport http` option for HTTP-based communication
+- **Per-Project Database** - Automatic project-specific database support via `Mcp-Project-Path` header
+- **Store Caching** - Multiple database connections managed efficiently with `Map<dbPath, KnowledgeGraphStore>`
+- **Port Auto-Retry** - Automatic port fallback when default port is in use
+
+### Changed
+
+- Global database path moved to `~/.claude/memory.db`
+- Enhanced graceful shutdown handling for HTTP mode
+
+### Technical
+
+- Added `express` and `commander` dependencies
+- HTTP endpoint: `/mcp` for MCP protocol, `/ping` for health check
+- AsyncLocalStorage for per-request project context
+
 ## [1.0.0] - 2025-01-01
 
 ### Added
