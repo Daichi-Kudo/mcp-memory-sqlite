@@ -1,7 +1,7 @@
 {
   "name": "@daichi-kudo/mcp-memory-sqlite",
   "version": "1.0.0",
-  "description": "A high-performance MCP memory server using SQLite with WAL mode for concurrent access. Drop-in replacement for @modelcontextprotocol/server-memory with better concurrency support.",
+  "description": "Production-ready MCP memory server with SQLite WAL for thread-safe concurrent access. Drop-in replacement for @modelcontextprotocol/server-memory. Prevents race conditions and data loss in multi-session AI agent environments. ACID-compliant knowledge graph for Claude AI and LLMs.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,21 +17,43 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
-    "prepublishOnly": "npm run build"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "keywords": [
     "mcp",
     "model-context-protocol",
+    "mcp-server",
     "memory",
     "sqlite",
+    "sqlite3",
+    "better-sqlite3",
     "knowledge-graph",
     "claude",
+    "claude-ai",
+    "claude-desktop",
     "anthropic",
     "ai-agent",
+    "multi-agent",
+    "llm",
+    "llm-memory",
     "concurrent",
-    "wal"
+    "concurrency",
+    "thread-safe",
+    "wal",
+    "wal-mode",
+    "persistence",
+    "database",
+    "acid",
+    "data-integrity",
+    "typescript"
   ],
-  "author": "Daichi Kudo",
+  "author": {
+    "name": "Daichi Kudo",
+    "url": "https://github.com/Daichi-Kudo"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -49,6 +71,10 @@
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.11",
     "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "rimraf": "^6.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
   },
