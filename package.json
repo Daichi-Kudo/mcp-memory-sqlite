@@ -1,5 +1,5 @@
 {
-  "name": "@daichi-kudo/mcp-memory-sqlite",
+  "name": "@pepk/mcp-memory-sqlite",
   "version": "1.0.0",
   "description": "Production-ready MCP memory server with SQLite WAL for thread-safe concurrent access. Drop-in replacement for @modelcontextprotocol/server-memory. Prevents race conditions and data loss in multi-session AI agent environments. ACID-compliant knowledge graph for Claude AI and LLMs.",
   "type": "module",

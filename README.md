@@ -1,6 +1,6 @@
 # MCP Memory SQLite - Thread-Safe Concurrent Memory Server
 
-[![npm version](https://badge.fury.io/js/@daichi-kudo%2Fmcp-memory-sqlite.svg)](https://www.npmjs.com/package/@daichi-kudo/mcp-memory-sqlite)
+[![npm version](https://badge.fury.io/js/@pepk%2Fmcp-memory-sqlite.svg)](https://www.npmjs.com/package/@pepk/mcp-memory-sqlite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
@@ -78,7 +78,7 @@ This package solves these issues by using **SQLite with WAL (Write-Ahead Logging
 ## Installation
 
 ```bash
-npm install @daichi-kudo/mcp-memory-sqlite
+npm install @pepk/mcp-memory-sqlite
 ```
 
 ## Quick Start
@@ -87,10 +87,10 @@ Get up and running in 30 seconds:
 
 ```bash
 # Use directly with npx (no installation needed)
-npx @daichi-kudo/mcp-memory-sqlite
+npx @pepk/mcp-memory-sqlite
 
 # Or install globally
-npm install -g @daichi-kudo/mcp-memory-sqlite
+npm install -g @pepk/mcp-memory-sqlite
 ```
 
 ## Configuration
@@ -105,7 +105,7 @@ Add to your `~/.claude.json`:
     "memory": {
       "type": "stdio",
       "command": "npx",
-      "args": ["@daichi-kudo/mcp-memory-sqlite"],
+      "args": ["@pepk/mcp-memory-sqlite"],
       "env": {
         "MEMORY_DB_PATH": "./.claude/memory.db"
       }
@@ -123,7 +123,7 @@ Add to your Claude Desktop configuration:
   "mcpServers": {
     "memory": {
       "command": "npx",
-      "args": ["@daichi-kudo/mcp-memory-sqlite"],
+      "args": ["@pepk/mcp-memory-sqlite"],
       "env": {
         "MEMORY_DB_PATH": "/path/to/your/memory.db"
       }
@@ -294,7 +294,7 @@ Relation
 ```json
 {
   "command": "npx",
-  "args": ["@daichi-kudo/mcp-memory-sqlite"]
+  "args": ["@pepk/mcp-memory-sqlite"]
 }
 ```
 
@@ -325,13 +325,13 @@ This package does not encrypt data at rest. Do not store:
 This package is API-compatible with `@modelcontextprotocol/server-memory`. Simply:
 
 1. Install this package
-2. Update your MCP configuration to use `@daichi-kudo/mcp-memory-sqlite`
+2. Update your MCP configuration to use `@pepk/mcp-memory-sqlite`
 3. Set `MEMORY_DB_PATH` to your preferred location
 
 ```bash
 # Update ~/.claude.json
 # FROM: "args": ["@modelcontextprotocol/server-memory"]
-# TO:   "args": ["@daichi-kudo/mcp-memory-sqlite"]
+# TO:   "args": ["@pepk/mcp-memory-sqlite"]
 ```
 
 **Note:** Existing JSONL data won't be automatically migrated. The database starts fresh.
