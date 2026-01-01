@@ -1,0 +1,20 @@
+# Source files
+src/
+
+# TypeScript config
+tsconfig.json
+
+# Development files
+*.db
+*.db-wal
+*.db-shm
+.gitignore
+.git/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

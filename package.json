@@ -1,0 +1,58 @@
+{
+  "name": "@daichi-kudo/mcp-memory-sqlite",
+  "version": "1.0.0",
+  "description": "A high-performance MCP memory server using SQLite with WAL mode for concurrent access. Drop-in replacement for @modelcontextprotocol/server-memory with better concurrency support.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-memory-sqlite": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memory",
+    "sqlite",
+    "knowledge-graph",
+    "claude",
+    "anthropic",
+    "ai-agent",
+    "concurrent",
+    "wal"
+  ],
+  "author": "Daichi Kudo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daichi-Kudo/mcp-memory-sqlite.git"
+  },
+  "homepage": "https://github.com/Daichi-Kudo/mcp-memory-sqlite#readme",
+  "bugs": {
+    "url": "https://github.com/Daichi-Kudo/mcp-memory-sqlite/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^11.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
