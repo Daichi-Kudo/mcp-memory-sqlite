@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.1] - 2026-06-18
+
+### Fixed
+
+- **Node 25 install failure**: bumped `better-sqlite3` `^11` → `^12`. The v11 line ships no prebuilt binary for Node 25 (NODE_MODULE_VERSION 141), forcing a from-source compile that fails for users without native build tools (e.g. Visual Studio on Windows). v12 provides Node 25 prebuilts.
+- Updated dependencies within range — resolves all `npm audit` advisories (9 high / 4 moderate → 0), including the `@modelcontextprotocol/sdk` ReDoS (now 1.29.0).
+- `serverInfo.version` now reports the correct package version (was hardcoded `1.0.0`).
+- Removed unused imports (lint clean).
+
+### Changed
+
+- `package.json` `author.url` now points to https://cognisant.io.
+
 ## [1.1.0] - 2026-01-02
 
 ### Added

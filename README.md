@@ -444,4 +444,4 @@ Issues and pull requests are welcome!
 
 ## License
 
-MIT
+MIT — built by [Cognisant LLC](https://cognisant.io)

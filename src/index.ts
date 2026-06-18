@@ -6,11 +6,10 @@ import { z } from "zod";
 import path from "path";
 import fs from "fs";
 import os from "os";
-import { fileURLToPath } from "url";
 import { Command } from "commander";
 import express from "express";
 import { AsyncLocalStorage } from "async_hooks";
-import { KnowledgeGraphStore, Entity, Relation } from "./store.js";
+import { KnowledgeGraphStore } from "./store.js";
 
 let isHttpMode = false;
 const DEFAULT_PORT = 3100;
@@ -127,7 +126,7 @@ const RelationSchema = z.object({
 
 const server = new McpServer({
   name: "memory-mcp-sqlite",
-  version: "1.0.0",
+  version: "1.1.1",
 });
 
 server.tool("create_entities", "Create multiple new entities in the knowledge graph",
